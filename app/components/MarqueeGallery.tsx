@@ -12,7 +12,7 @@ export default function MarqueeGallery() {
                     <div>
                         <div className="text-[11.5px] uppercase tracking-[0.18em] text-[#B6178C] font-[700]">Featured gallery</div>
                         <h2 className="display text-[40px] sm:text-[46px] leading-[1.04] text-[#2b162e] mt-1">The marquee wall</h2>
-                        <p className="text-[#6d5970] mt-3 max-w-[580px]">A continuous, painterly scroll — click any canvas to view protected, shareable large format.</p>
+                        <p className="text-[#6d5970] mt-3 max-w-[580px]">A continuous, painterly scroll click any canvas to view protected, shareable large format.</p>
                     </div>
                     <a href="#full-gallery" className="text-[13.8px] font-[650] text-[#5C1466] px-4 py-[10px] rounded-full border border-[#e7cde3] bg-white hover:border-[#d9a6d3]">View full gallery</a>
                 </div>

@@ -33,14 +33,14 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <img
-                src="/images/logo-splash.png"
+                src="/logo-splash.png"
                 alt="@rt Chinny World"
                 className="w-12 h-12 rounded-xl object-cover shadow-lg"
               />
               <div className="display text-white text-[20px]">@rt Chinny World</div>
             </div>
             <p className="text-[13.6px] leading-relaxed text-[#c8a8ba] mb-6">
-              Chinenye Okonta — Visual artist, muralist, art educator. Charlottetown, PEI.
+              Chinenye Okonta Visual artist, muralist, art educator. Charlottetown, PEI.
             </p>
 
             {/* Social Media Links */}
@@ -116,7 +116,7 @@ export default function Footer() {
 
           {/* Developer Credit */}
           <a
-            href="https://www.anziandco.com"
+            href="https://www.anziandco.com/?ref=@archinnyartworld"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[14px] text-white hover:text-[#E454B0] transition-all duration-300 flex items-center gap-2 group font-[500]"

@@ -1,4 +1,4 @@
-import { artistPortrait } from "./data";
+
 
 export default function About() {
     return (
@@ -18,13 +18,13 @@ export default function About() {
                     <h2 className="display text-[40px] leading-[1.08] text-[#2a172b] mt-2">Nigerian-Canadian visual artist, muralist, mother, educator.</h2>
                     <div className="mt-5 text-[16.2px] leading-relaxed text-[#554156] space-y-[16px] max-w-[700px]">
                         <p>
-                            I am Chinenye Okonta — @rt Chinny World. For over eighteen years I've taught creative arts, led a Creative Department, and painted walls that a city walks past every day. I hold a Masters in Fine and Applied Arts, and today I work from Prince Edward Island, in Mi'kma'ki, the ancestral and unceded territory of the Mi'kmaq People.
+                            I am Chinenye Okonta @rt Chinny World. For over eighteen years I've taught creative arts, led a Creative Department, and painted walls that a city walks past every day. I hold a Masters in Fine and Applied Arts, and today I work from Prince Edward Island, in Mi'kma'ki, the ancestral and unceded territory of the Mi'kmaq People.
                         </p>
                         <p>
-                            My practice moves between <strong>large-scale murals</strong> (including a 96ft x 8ft executed mural, and a wraparound proposal for the Charlottetown Library Learning Centre), <strong>gallery paintings</strong>, <strong>immersive public exhibitions</strong> — such as my 2024 gender-based-violence exhibition with Innovation PEI — and <strong>art therapy / art education</strong> with children and special-needs learners, including volunteer work with Autism PEI.
+                            My practice moves between <strong>large-scale murals</strong> (including a 96ft x 8ft executed mural, and a wraparound proposal for the Charlottetown Library Learning Centre), <strong>gallery paintings</strong>, <strong>immersive public exhibitions</strong> such as my 2024 gender-based-violence exhibition with Innovation PEI and <strong>art therapy / art education</strong> with children and special-needs learners, including volunteer work with Autism PEI.
                         </p>
                         <p>
-                            Themes I return to: resilience, diversity, identity, healing, hope, memory, human connection. I believe public art should make people feel <em>welcomed, inspired, curious, hopeful, connected</em> — long after they leave the room.
+                            Themes I return to: resilience, diversity, identity, healing, hope, memory, human connection. I believe public art should make people feel <em>welcomed, inspired, curious, hopeful, connected</em> long after they leave the room.
                         </p>
                     </div>
                     <div className="mt-7 flex flex-wrap gap-3 text-[12.6px]">

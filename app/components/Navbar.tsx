@@ -8,7 +8,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const pathname = usePathname();
-  
+
   const navItems = [
     { id: 'home', label: 'Home', href: '/' },
     { id: 'about', label: 'About', href: '/about' },
@@ -49,7 +49,7 @@ export default function Navbar() {
       <div className="max-w-[1220px] mx-auto px-6 sm:px-10 lg:px-12 h-[74px] flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-10 h-10 rounded-[16px] overflow-hidden shadow-sm">
-            <img src="/images/logo-splash.png" alt="@rt Chinny World" className="w-full h-full object-cover protected-img" draggable={false} />
+            <img src="/logo-splash.png" alt="@rt Chinny World" className="w-full h-full object-cover protected-img" draggable={false} />
             <div className="absolute inset-0 mix-blend-overlay opacity-[0.16] bg-[radial-gradient(circle_at_30%_30%,#E454B0,#5C1466)]"></div>
           </div>
           <div className="leading-tight">
@@ -62,9 +62,9 @@ export default function Navbar() {
           {navItems.map((item) => {
             const isActive = activeSection === item.id;
             return (
-              <Link 
-                key={item.id} 
-                href={pathname === "/" ? `/#${item.id}` : item.href} 
+              <Link
+                key={item.id}
+                href={pathname === "/" ? `/#${item.id}` : item.href}
                 className={`relative px-4 py-2 rounded-full transition-colors duration-300 ${isActive ? 'text-[#B6178C]' : 'hover:text-[#B6178C]'}`}
               >
                 {isActive && (

@@ -8,22 +8,37 @@ export default function Services() {
 
     const services = [
         {
-            title: 'Mural Commissions',
-            desc: 'Public & private large-scale, site-responsive wall works. Concept • site visit • design proposal • execution • unveiling.',
-            img: artworks[0].image,
-            bullets: ['96ft x 8ft executed reference', 'Library Learning Centre proposal live', 'Municipal + private ready']
+            title: 'Wall Art & Murals',
+            desc: 'Large-scale, site-responsive murals for public and private walls from concept sketch to final unveiling. Every piece is designed around the architecture, light, and story of its location, not dropped in generically.',
+            img: '/service-wallart.jpeg',
+            bullets: [
+                '96ft × 8ft executed reference project',
+                'Library Learning Centre proposal in progress',
+                'Municipal, commercial & private residence ready',
+                'Full process: site visit • concept • proposal • execution'
+            ]
         },
         {
             title: 'Original Art & Paintings',
-            desc: 'Gallery originals, commission-ready. Emotionally charged, colour-led works – price on inquiry.',
-            img: artworks[6].image,
-            bullets: ['Acrylic / oil / mixed media', 'Shipping + certificate of authenticity', 'Studio commissions open']
+            desc: 'Gallery-quality originals in acrylic, oil, and mixed media colour-led, emotionally charged pieces available as-is or as studio commissions built to your space, palette, or story.',
+            img: '/paint-service.jpg',
+            bullets: [
+                'Acrylic, oil & mixed media practice',
+                'Custom commissions open',
+                'Shipping arranged + certificate of authenticity',
+                'Price on inquiry'
+            ]
         },
         {
             title: 'Art Education & Art Therapy Workshops',
-            desc: 'Schools, special-needs programs, Autism PEI partners. Healing through making.',
-            img: artworks[16].image,
-            bullets: ['SEN inclusive practice', '18+ years Head of Creative Dept.', 'Community & corporate workshops']
+            desc: 'Workshops for schools, community groups, and corporate teams that use art-making as a tool for learning and healing built on 18+ years of classroom and inclusive-practice experience, including partnership work with Autism PEI.',
+            img: '/education-art.jpeg',
+            bullets: [
+                '18+ years as Head of Creative Department',
+                'SEN / inclusive practice specialization',
+                'Autism PEI partner programs',
+                'Custom sessions for schools & corporate teams'
+            ]
         },
     ];
 

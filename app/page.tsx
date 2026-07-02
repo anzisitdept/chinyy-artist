@@ -10,12 +10,13 @@ import Awards from "./components/Awards";
 import Services from "./components/Services";
 import About from "./components/About";
 import FullGallery from "./components/FullGallery";
-import Exhibitions from "./components/Exhibitions";
+import CommunityImpact from "./components/CommunityImpact";
 import InstagramStrip from "./components/InstagramStrip";
 import Contact from "./components/Contact";
 import CTABanner from "./components/CTABanner";
 import Lightbox from "./components/Lightbox";
 import InquiryModal from "./components/InquiryModal";
+
 
 export default function App() {
   return (
@@ -34,7 +35,7 @@ export default function App() {
         <Services />
         <About />
         <FullGallery />
-        <Exhibitions />
+        <CommunityImpact />
         <InstagramStrip />
         <Contact />
         <CTABanner />

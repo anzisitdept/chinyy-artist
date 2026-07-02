@@ -88,7 +88,7 @@ export default function Hero() {
                     </div>
                     {/* splash logo */}
                     <div className="absolute -right-5 -bottom-7 w-28 h-28 sm:w-36 sm:h-36 splash-pulse pointer-events-none select-none">
-                        <img src="/images/logo-splash.png" alt="" className="w-full h-full object-contain drop-shadow-2xl" draggable={false} />
+                        <img src="/logo-splash.png" alt="" className="w-full h-full object-contain drop-shadow-2xl" draggable={false} />
                     </div>
                 </div>
             </div>

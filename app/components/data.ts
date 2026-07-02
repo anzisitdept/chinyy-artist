@@ -264,4 +264,3 @@ export const categories = ['All', 'Wall Arts', 'Paintings', 'Decorations', 'Exhi
 
 export const HERO_WORKS = [artworks[0], artworks[6], artworks[12], artworks[2], artworks[8], artworks[14]];
 
-export const artistPortrait = 'https://images.pexels.com/photos/5682054/pexels-photo-5682054.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=860&h=1080';
