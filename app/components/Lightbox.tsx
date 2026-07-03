@@ -7,6 +7,8 @@ export default function Lightbox() {
 
     if (!lightbox) return null;
 
+    const hasDetails = !!(lightbox.medium || lightbox.dimensions || lightbox.story || lightbox.priceNote);
+
     return (
         <div className="fixed inset-0 z-[100] flex items-center justify-center">
             <div className="absolute inset-0 bg-[#120614]/87 backdrop-blur-[8px]" onClick={() => setLightbox(null)} />
@@ -38,25 +40,40 @@ export default function Lightbox() {
                 </div>
 
                 <div className="p-7 sm:p-9 flex flex-col">
-                    <div className="text-[11px] uppercase tracking-wider text-[#B6178C] font-[700]">{lightbox.category} • {lightbox.year}</div>
+                    <div className="text-[11px] uppercase tracking-wider text-[#B6178C] font-[700]">
+                        {lightbox.category} {lightbox.year ? `• ${lightbox.year}` : ''}
+                    </div>
                     <h3 className="display text-[30px] text-[#271729] mt-1 leading-tight">{lightbox.title}</h3>
-                    <div className="text-[13.7px] text-[#6b4d66] mt-2">
-                        {lightbox.medium}<br />
-                        {lightbox.dimensions}
-                        {lightbox.location && <><br />{lightbox.location}</>}
-                    </div>
-                    <p className="text-[15px] text-[#483548] leading-relaxed mt-5">{lightbox.story}</p>
+                    
+                    {hasDetails && (
+                        <>
+                            {(lightbox.medium || lightbox.dimensions || lightbox.location) && (
+                                <div className="text-[13.7px] text-[#6b4d66] mt-2">
+                                    {lightbox.medium && <>{lightbox.medium}<br /></>}
+                                    {lightbox.dimensions && <>{lightbox.dimensions}</>}
+                                    {lightbox.location && <><br />{lightbox.location}</>}
+                                </div>
+                            )}
+                            {lightbox.story && (
+                                <p className="text-[15px] text-[#483548] leading-relaxed mt-5">{lightbox.story}</p>
+                            )}
 
-                    <div className="mt-6 p-4 rounded-2xl bg-[#fdf4fa] border border-[#f1d6e6] text-[13.4px] text-[#68445b]">
-                        <strong className="text-[#652753]">{lightbox.priceNote}</strong><br />
-                        Price-on-request. No checkout — studio inquiry only. Certificate of authenticity included.
-                    </div>
+                            {lightbox.priceNote && (
+                                <div className="mt-6 p-4 rounded-2xl bg-[#fdf4fa] border border-[#f1d6e6] text-[13.4px] text-[#68445b]">
+                                    <strong className="text-[#652753]">{lightbox.priceNote}</strong><br />
+                                    Price-on-request. No checkout — studio inquiry only. Certificate of authenticity included.
+                                </div>
+                            )}
+                        </>
+                    )}
 
                     <div className="mt-auto pt-6 flex flex-col gap-[10px]">
-                        <button onClick={() => openInquire(lightbox)} className="w-full py-[13px] rounded-full text-white font-[660] text-[14.6px]"
-                            style={{ background: 'linear-gradient(135deg,#5C1466,#B6178C)' }}>
-                            Inquire about this piece
-                        </button>
+                        {hasDetails && (
+                            <button onClick={() => openInquire(lightbox)} className="w-full py-[13px] rounded-full text-white font-[660] text-[14.6px]"
+                                style={{ background: 'linear-gradient(135deg,#5C1466,#B6178C)' }}>
+                                Inquire about this piece
+                            </button>
+                        )}
                         <div className="flex gap-2">
                             <button onClick={() => handleShare(lightbox)} className="flex-1 py-[10px] rounded-full border border-[#e2bcd3] text-[#6f2b59] font-[600] text-[13.4px] bg-white">
                                 Share link

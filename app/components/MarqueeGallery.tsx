@@ -1,9 +1,30 @@
 "use client";
 
 import { useGallery } from "./GalleryContext";
+import { canvasImages, wallartImages, decorationImages } from "./marqueeData";
+import { Artwork } from "./data";
+
+const mapToArtwork = (paths: string[], category: string): Artwork[] => {
+    return paths.map((path, idx) => ({
+        id: `${category}-${idx}`,
+        title: `${category} Collection`,
+        category: category as any,
+        image: path,
+        medium: '',
+        dimensions: '',
+        year: '',
+        story: '',
+    }));
+};
+
+const customMarqueeRows = [
+    mapToArtwork(canvasImages, 'Paintings'),
+    mapToArtwork(wallartImages, 'Wall Arts'),
+    mapToArtwork(decorationImages, 'Decorations'),
+];
 
 export default function MarqueeGallery() {
-    const { marqueeRows, setLightbox } = useGallery();
+    const { setLightbox } = useGallery();
 
     return (
         <section id="portfolio" className="bg-[#fcf8fc] py-[88px] relative overflow-hidden">
@@ -23,7 +44,7 @@ export default function MarqueeGallery() {
                 <div className="mx-auto max-w-[1420px] rounded-[28px] overflow-hidden p-[6px]"
                     style={{ background: 'linear-gradient(135deg,#5C1466, #B6178C 50%, #E454B0)' }}>
                     <div className="bg-[#fffaf5] rounded-[24px] py-7 faint-grid space-y-5">
-                        {marqueeRows.map((row, rIdx) => (
+                        {customMarqueeRows.map((row, rIdx) => (
                             <div key={rIdx} className="overflow-hidden relative">
                                 <div
                                     className={`marquee-track ${rIdx % 2 === 0 ? 'marquee-left' : 'marquee-right'}`}
@@ -38,10 +59,6 @@ export default function MarqueeGallery() {
                                             <div className="w-[250px] sm:w-[300px] h-[200px] sm:h-[226px] rounded-[19px] overflow-hidden bg-white shadow-[0_8px_24px_rgba(92,20,102,0.10)] border border-[#f2e3f0] transition-all duration-300 group-hover:scale-[1.028] group-hover:shadow-[0_14px_34px_rgba(182,23,140,0.16)]">
                                                 <img src={art.image} alt={art.title} draggable={false} onContextMenu={e => e.preventDefault()} className="w-full h-full object-cover protected-img" />
                                                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-t from-[#340b3b]/86 via-[#340b3b]/22 to-transparent" />
-                                                <div className="absolute left-3 right-3 bottom-3 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all">
-                                                    <div className="text-white text-[14.7px] font-[600] leading-tight">{art.title}</div>
-                                                    <div className="text-[#ffd5f0] text-[11.7px]">{art.category} • {art.year}</div>
-                                                </div>
                                                 {/* tiny brush dot cursor hint */}
                                                 <div className="absolute top-3 right-3 w-2.5 h-2.5 rounded-full bg-[#E454B0] shadow group-hover:scale-125 transition" />
                                             </div>

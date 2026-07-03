@@ -46,11 +46,8 @@ export default function FullGallery() {
                                 </div>
                                 <div className="px-4 pt-3 pb-4">
                                     <div className="display text-[18.6px] text-[#2d1a2c] leading-tight">{art.title}</div>
-                                    <div className="text-[12.8px] text-[#826079] mt-1">{art.medium} • {art.dimensions} • {art.year}</div>
-                                    <div className="text-[13.2px] text-[#5b4458] mt-[9px] leading-snug line-clamp-2">{art.story}</div>
                                     <div className="mt-3 flex items-center justify-between">
-                                        <span className="text-[12px] font-[600] text-[#B6178C]">{art.priceNote}</span>
-                                        <span className="text-[12.5px] text-[#a06d90] group-hover:text-[#B6178C]">View →</span>
+                                        <span className="text-[12.5px] text-[#a06d90] group-hover:text-[#B6178C]">View Details →</span>
                                     </div>
                                 </div>
                             </div>

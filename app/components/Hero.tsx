@@ -1,8 +1,42 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { HERO_WORKS } from "./data";
 import { useGallery } from "./GalleryContext";
+
+// Define your manual hero slides here. 
+// You can change 'image' to the main full-size picture and 'thumbnail' to a different image if you want.
+const MANUAL_HERO_SLIDES = [
+    {
+        id: 'slide-1',
+        title: 'Sample Artwork 1',
+        category: 'Paintings',
+        year: '2024',
+        image: '/canvas/1.jpeg',
+        thumbnail: '/canvas/1.jpeg', // Change this if you want a different thumbnail
+        medium: 'Acrylic',
+        dimensions: '48" × 48"',
+    },
+    {
+        id: 'slide-2',
+        title: 'Sample Artwork 2',
+        category: 'Wall Arts',
+        year: '2023',
+        image: '/wallart/1.jpeg',
+        thumbnail: '/wallart/1.jpeg', // Change this if you want a different thumbnail
+        medium: 'Mixed Media',
+        dimensions: '36" × 48"',
+    },
+    {
+        id: 'slide-3',
+        title: 'Sample Artwork 3',
+        category: 'Decorations',
+        year: '2022',
+        image: '/decoration/1.jpeg',
+        thumbnail: '/decoration/1.jpeg', // Change this if you want a different thumbnail
+        medium: 'Installation',
+        dimensions: 'Variable',
+    }
+];
 
 export default function Hero() {
     const { openInquire } = useGallery();
@@ -10,7 +44,7 @@ export default function Hero() {
 
     // hero rotation
     useEffect(() => {
-        const t = setInterval(() => setHeroIdx((i) => (i + 1) % HERO_WORKS.length), 5200);
+        const t = setInterval(() => setHeroIdx((i) => (i + 1) % MANUAL_HERO_SLIDES.length), 5200);
         return () => clearInterval(t);
     }, []);
 
@@ -52,7 +86,7 @@ export default function Hero() {
                     <div className="absolute -top-6 -left-9 w-24 h-24 rounded-full blur-[32px] opacity-70" style={{ background: 'radial-gradient(circle,#E454B0, transparent 70%)' }} />
                     <div className="relative rounded-[34px] overflow-hidden shadow-[0_34px_80px_rgba(46,4,53,0.44)] border border-white/18 bg-[#2c0a33]/10 backdrop-blur-sm">
                         <div className="aspect-[4/5] relative overflow-hidden">
-                            {HERO_WORKS.map((hw, i) => (
+                            {MANUAL_HERO_SLIDES.map((hw, i) => (
                                 <div key={hw.id}
                                     className={`absolute inset-0 transition-opacity duration-700 ${i === heroIdx ? 'opacity-100' : 'opacity-0'}`}>
                                     <img
@@ -77,11 +111,11 @@ export default function Hero() {
                         </div>
                         {/* thumbnails */}
                         <div className="flex gap-[9px] px-4 py-3 bg-[#27092d]/70 border-t border-white/10 overflow-x-auto">
-                            {HERO_WORKS.map((hw, i) => (
+                            {MANUAL_HERO_SLIDES.map((hw, i) => (
                                 <button key={hw.id}
                                     onClick={() => setHeroIdx(i)}
                                     className={`flex-shrink-0 w-[68px] h-[48px] rounded-lg overflow-hidden border-2 transition-all ${i === heroIdx ? 'border-[#E454B0] scale-[1.03]' : 'border-white/18 opacity-75 hover:opacity-100'}`}>
-                                    <img src={hw.image} className="w-full h-full object-cover protected-img" draggable={false} alt="" />
+                                    <img src={hw.thumbnail} className="w-full h-full object-cover protected-img" draggable={false} alt="" />
                                 </button>
                             ))}
                         </div>
