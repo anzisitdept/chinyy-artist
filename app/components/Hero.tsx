@@ -8,31 +8,51 @@ import { useGallery } from "./GalleryContext";
 const MANUAL_HERO_SLIDES = [
     {
         id: 'slide-1',
-        title: 'Sample Artwork 1',
+        title: 'Artwork 1',
         category: 'Paintings',
         year: '2024',
         image: '/canvas/1.jpeg',
-        thumbnail: '/canvas/1.jpeg', // Change this if you want a different thumbnail
+        thumbnail: '/canvas/1.jpeg',
         medium: 'Acrylic',
         dimensions: '48" × 48"',
     },
     {
         id: 'slide-2',
-        title: 'Sample Artwork 2',
+        title: 'Artwork 1',
+        category: 'Paintings',
+        year: '2024',
+        image: '/canvas/27.jpeg',
+        thumbnail: '/canvas/27.jpeg',
+        medium: 'Acrylic',
+        dimensions: '48" × 48"',
+    },
+    {
+        id: 'slide-3',
+        title: 'Artwork 2',
         category: 'Wall Arts',
         year: '2023',
-        image: '/wallart/1.jpeg',
-        thumbnail: '/wallart/1.jpeg', // Change this if you want a different thumbnail
+        image: '/wallart/6 (3).jpeg',
+        thumbnail: '/wallart/6 (3).jpeg',
         medium: 'Mixed Media',
         dimensions: '36" × 48"',
     },
     {
-        id: 'slide-3',
-        title: 'Sample Artwork 3',
+        id: 'slide-4',
+        title: 'Artwork 2',
+        category: 'Wall Arts',
+        year: '2023',
+        image: '/wallart/26.jpeg',
+        thumbnail: '/wallart/26.jpeg',
+        medium: 'Mixed Media',
+        dimensions: '36" × 48"',
+    },
+    {
+        id: 'slide-5',
+        title: 'Artwork 3',
         category: 'Decorations',
         year: '2022',
         image: '/decoration/1.jpeg',
-        thumbnail: '/decoration/1.jpeg', // Change this if you want a different thumbnail
+        thumbnail: '/decoration/1.jpeg',
         medium: 'Installation',
         dimensions: 'Variable',
     }
@@ -54,9 +74,7 @@ export default function Hero() {
             <div className="max-w-[1220px] mx-auto px-6 sm:px-10 lg:px-12 py-[72px] lg:py-[104px] grid lg:grid-cols-[1.12fr_.98fr] gap-12 items-center relative">
                 {/* left */}
                 <div>
-                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-[11.6px] tracking-wide backdrop-blur">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#F2A93B]" /> Nigerian-Canadian Visual Artist • Charlottetown, PEI • Epekwitk
-                    </div>
+
                     <h1 className="display text-[44px] sm:text-[58px] lg:text-[68px] leading-[0.93] font-[660] mt-6 tracking-[-0.018em]">
                         Art that stays with you<br />
                         <span className="italic font-[550] text-[#ffd2f2]">long after you leave</span><br />the room.

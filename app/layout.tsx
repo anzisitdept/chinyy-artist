@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "@rt Chinny World — Chinenye Okonta | Visual Artist & Muralist",
   description: "@rt Chinny World — Nigerian-Canadian visual artist, muralist, and art educator based in Prince Edward Island. Mural commissions, gallery paintings, art therapy workshops.",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 import Navbar from "./components/Navbar";

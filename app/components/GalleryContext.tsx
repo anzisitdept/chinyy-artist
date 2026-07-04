@@ -76,10 +76,28 @@ export function GalleryProvider({ children }: { children: ReactNode }) {
         setTimeout(() => setToast(null), 2600);
     };
 
-    const filtered = useMemo(
-        () => (activeCat === "All" ? artworks : artworks.filter((a) => a.category === activeCat)),
-        [activeCat]
-    );
+    const filtered = useMemo(() => {
+        if (activeCat !== "All") {
+            return artworks.filter((a) => a.category === activeCat);
+        }
+        
+        const paintings = artworks.filter(a => a.category === "Paintings");
+        const wallArts = artworks.filter(a => a.category === "Wall Arts");
+        const decorations = artworks.filter(a => a.category === "Decorations");
+        const others = artworks.filter(a => a.category !== "Paintings" && a.category !== "Wall Arts" && a.category !== "Decorations");
+
+        const interleaved: Artwork[] = [];
+        const maxChunks = Math.ceil(Math.max(paintings.length, wallArts.length, decorations.length, others.length) / 3);
+
+        for (let i = 0; i < maxChunks; i++) {
+            const start = i * 3;
+            interleaved.push(...paintings.slice(start, start + 3));
+            interleaved.push(...wallArts.slice(start, start + 3));
+            interleaved.push(...decorations.slice(start, start + 3));
+            interleaved.push(...others.slice(start, start + 3));
+        }
+        return interleaved;
+    }, [activeCat]);
 
     const marqueeRows = useMemo(() => {
         const m = artworks.filter((a) => a.category === "Murals" || a.category === "Commissioned");

@@ -126,10 +126,6 @@ export default function Footer() {
             <span className="text-[11px] opacity-70 group-hover:translate-x-1 transition-transform">→</span>
           </a>
 
-          {/* Secondary Info */}
-          <div className="text-[13px] text-white font-[500] opacity-75">
-            Charlottetown, PEI
-          </div>
         </div>
       </div>
     </footer>

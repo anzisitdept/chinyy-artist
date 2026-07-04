@@ -9,12 +9,12 @@ import { useEffect, useRef } from "react";
  * 6-8 posts looks best in the strip.
  */
 const POST_URLS: string[] = [
-    "https://www.instagram.com/p/REPLACE_ME_1/",
-    "https://www.instagram.com/p/REPLACE_ME_2/",
-    "https://www.instagram.com/p/REPLACE_ME_3/",
-    "https://www.instagram.com/p/REPLACE_ME_4/",
-    "https://www.instagram.com/p/REPLACE_ME_5/",
-    "https://www.instagram.com/p/REPLACE_ME_6/",
+    "https://www.instagram.com/p/DCn01vXxpRC/",
+    "https://www.instagram.com/p/DD3TnLuMaQt/",
+    "https://www.instagram.com/p/C_eMIYJJGkW/",
+    "https://www.instagram.com/p/C9Dl4-_prB5/",
+    "https://www.instagram.com/p/C8lVIJIMWBn/",
+    "https://www.instagram.com/p/C2YswnGMfYo/",
 ];
 
 declare global {

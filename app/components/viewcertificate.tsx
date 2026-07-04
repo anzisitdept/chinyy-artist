@@ -210,31 +210,6 @@ Okonta Chinenye Frances`
                         </button>
                     </div>
 
-                    {/* Info Section */}
-                    <div className="mt-12 grid sm:grid-cols-2 gap-6 bg-[#fef8fd] rounded-[18px] p-8 border border-[#f1ddea]">
-                        <div>
-                            <div className="text-[12px] flex items-center gap-1.5 font-[700] text-[#B6178C] uppercase tracking-[0.1em] mb-2">
-                                <ClipboardList size={15} /> Document Details
-                            </div>
-                            <ul className="space-y-2 text-[13.5px] text-[#5a455a]">
-                                <li>• <span className="font-[600]">6 Pages</span> total</li>
-                                <li>• Application letter format</li>
-                                <li>• Mural project proposal</li>
-                                <li>• Community engagement focus</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div className="text-[12px] flex items-center gap-1.5 font-[700] text-[#B6178C] uppercase tracking-[0.1em] mb-2">
-                                <Palette size={15} /> Artist Profile
-                            </div>
-                            <ul className="space-y-2 text-[13.5px] text-[#5a455a]">
-                                <li>• 18+ years educator</li>
-                                <li>• MFA Fine & Applied Arts</li>
-                                <li>• Nigerian-Canadian artist</li>
-                                <li>• @atchinnyartworld</li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>

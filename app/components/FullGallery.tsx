@@ -1,10 +1,18 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { categories } from "./data";
 import { useGallery } from "./GalleryContext";
 
 export default function FullGallery() {
     const { activeCat, setActiveCat, filtered, setLightbox } = useGallery();
+    const [displayCount, setDisplayCount] = useState(9);
+
+    useEffect(() => {
+        setDisplayCount(9);
+    }, [activeCat]);
+
+    const displayedArt = activeCat === "All" ? filtered.slice(0, displayCount) : filtered;
 
     return (
         <section id="full-gallery" className="py-[92px] bg-[#fdf9fc] border-y border-[#f4e4f0]">
@@ -34,7 +42,7 @@ export default function FullGallery() {
                 </div>
 
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {filtered.map(art => (
+                    {displayedArt.map(art => (
                         <div key={art.id} id={`art-${art.id}`} className="group cursor-pointer"
                             onClick={() => setLightbox(art)}>
                             <div className="rounded-[22px] overflow-hidden border border-[#f0dde9] bg-white shadow-[0_6px_22px_rgba(93,20,102,0.07)] relative transition-all duration-300 group-hover:translate-y-[-4px] group-hover:shadow-[0_18px_42px_rgba(182,23,140,0.15)]">
@@ -54,6 +62,18 @@ export default function FullGallery() {
                         </div>
                     ))}
                 </div>
+
+                {activeCat === "All" && displayCount < filtered.length && (
+                    <div className="mt-12 flex justify-center">
+                        <button 
+                            onClick={() => setDisplayCount(prev => prev + 9)}
+                            className="px-8 py-3 rounded-full text-[14px] font-[600] text-white transition-all shadow-[0_4px_14px_rgba(182,23,140,0.25)] hover:shadow-[0_6px_20px_rgba(182,23,140,0.4)] hover:-translate-y-0.5"
+                            style={{ background: 'linear-gradient(135deg,#5C1466,#B6178C)' }}
+                        >
+                            Load More
+                        </button>
+                    </div>
+                )}
             </div>
         </section>
     );

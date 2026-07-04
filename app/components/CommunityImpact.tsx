@@ -84,8 +84,6 @@ export default function CommunityImpact() {
             </div>
           </div>
         </div>
-
-
       </div>
     </section>
   );

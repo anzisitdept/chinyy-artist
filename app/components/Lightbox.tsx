@@ -21,7 +21,7 @@ export default function Lightbox() {
                         alt={lightbox.title}
                         draggable={false}
                         onContextMenu={e => e.preventDefault()}
-                        className="w-full h-full max-h-[88vh] object-contain protected-img"
+                        className="w-full h-auto min-h-[40vh] max-h-[50vh] lg:h-full lg:min-h-0 lg:max-h-[88vh] object-contain protected-img"
                     />
                     {/* watermark overlay */}
                     <div className="absolute inset-0 pointer-events-none"
