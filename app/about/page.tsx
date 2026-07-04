@@ -18,13 +18,13 @@ export default function AboutPage() {
           <h2 className="display text-[40px] leading-[1.08] text-[#2a172b] mt-2">Nigerian-Canadian visual artist, muralist, mother, educator.</h2>
           <div className="mt-5 text-[16.2px] leading-relaxed text-[#554156] space-y-[16px] max-w-[700px]">
             <p>
-              I am Chinenye Okonta — @rt Chinny World. For over eighteen years I've taught creative arts, led a Creative Department, and painted walls that a city walks past every day. I hold [...]
+              I am Chinenye Okonta — @rt Chinny World. For over eighteen years I've taught creative arts, led a Creative Department, and painted walls that a city walks past every day. I hold an MFA in Fine & Applied Arts.
             </p>
             <p>
-              My practice moves between <strong>large-scale murals</strong> (including a 96ft x 8ft executed mural, and a wraparound proposal for the Charlottetown Library Learning Centre), <stron[...]
+              My practice moves between <strong>large-scale murals</strong> (including a 96ft x 8ft executed mural, and a wraparound proposal for the Charlottetown Library Learning Centre), <strong>gallery paintings</strong>, and <strong>art therapy workshops</strong>.
             </p>
             <p>
-              Themes I return to: resilience, diversity, identity, healing, hope, memory, human connection. I believe public art should make people feel <em>welcomed, inspired, curious, hopeful, c[...]
+              Themes I return to: resilience, diversity, identity, healing, hope, memory, human connection. I believe public art should make people feel welcomed, inspired, curious, hopeful, and seen.
             </p>
           </div>
           <div className="mt-7 flex flex-wrap gap-3 text-[12.6px]">
