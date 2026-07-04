@@ -48,7 +48,7 @@ export default function MarqueeGallery() {
                             <div key={rIdx} className="overflow-hidden relative">
                                 <div
                                     className={`marquee-track ${rIdx % 2 === 0 ? 'marquee-left' : 'marquee-right'}`}
-                                    style={{ animationDuration: `${52 + rIdx * 6}s` }}
+                                    style={{ animationDuration: `${rIdx === 0 ? 110 : 80 + rIdx * 15}s` }}
                                 >
                                     {[...row, ...row].map((art, i) => (
                                         <button

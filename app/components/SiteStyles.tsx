@@ -31,6 +31,21 @@ export default function SiteStyles() {
     @keyframes marqueeL { from { transform: translateX(0) } to { transform: translateX(-50%) } }
     @keyframes marqueeR { from { transform: translateX(-50%) } to { transform: translateX(0) } }
     .marquee-track:hover { animation-play-state: paused; }
+    
+    @media (max-width: 768px) {
+      .marquee-track {
+        animation: none !important;
+        transform: none !important;
+        overflow-x: auto;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 8px; /* For scrollbar */
+      }
+      .marquee-track > button {
+        scroll-snap-align: center;
+      }
+    }
     .brush-reveal {
       clip-path: circle(135% at 45% 40%);
       animation: brushIn 1.15s cubic-bezier(.22,1,.36,1) both;

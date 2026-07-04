@@ -75,9 +75,10 @@ export default function Hero() {
                 {/* left */}
                 <div>
 
-                    <h1 className="display text-[44px] sm:text-[58px] lg:text-[68px] leading-[0.93] font-[660] mt-6 tracking-[-0.018em]">
-                        Art that stays with you<br />
-                        <span className="italic font-[550] text-[#ffd2f2]">long after you leave</span><br />the room.
+                    <h1 className="display text-[36px] sm:text-[58px] lg:text-[68px] leading-[1.05] sm:leading-[0.93] font-[660] mt-6 tracking-[-0.018em] overflow-hidden">
+                        Art that stays with you<br className="hidden sm:block" />
+                        <span className="italic font-[550] text-[#ffd2f2]">long after you leave</span><br className="hidden sm:block" />
+                        <span className="sm:hidden"> </span>the room.
                     </h1>
                     <p className="mt-[22px] text-[17.5px] leading-relaxed text-[#f7dff0] max-w-[560px] font-[400]">
                         I'm Chinenye (Chinny) Okonta — muralist, painter, and art educator. Public art, gallery originals, and art therapy workshops grounded in resilience, diversity, identity, and healing.
