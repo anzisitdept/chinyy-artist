@@ -11,12 +11,12 @@ export default function Navbar() {
 
   const navItems = [
     { id: 'home', label: 'Home', href: '/' },
-    { id: 'about', label: 'About', href: '/about' },
-    { id: 'portfolio', label: 'Portfolio', href: '/portfolio' },
-    { id: 'awards', label: 'Awards', href: '/awards' },
-    { id: 'services', label: 'Services', href: '/services' },
-    { id: 'exhibitions', label: 'Exhibitions', href: '/exhibitions' },
-    { id: 'contact', label: 'Contact', href: '/contact' },
+    { id: 'about', label: 'About', href: '/#about' },
+    { id: 'portfolio', label: 'Portfolio', href: '/#portfolio' },
+    { id: 'awards', label: 'Awards', href: '/#awards' },
+    { id: 'services', label: 'Services', href: '/#services' },
+    { id: 'exhibitions', label: 'Exhibitions', href: '/#exhibitions' },
+    { id: 'contact', label: 'Contact', href: '/#contact' },
   ];
 
   useEffect(() => {
@@ -77,7 +77,7 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link href="/contact" className="hidden sm:inline-flex text-[13.5px] font-[600] px-4 py-[10px] rounded-full text-white transition hover:scale-105"
+          <Link href="/#contact" className="hidden sm:inline-flex text-[13.5px] font-[600] px-4 py-[10px] rounded-full text-white transition hover:scale-105"
             style={{ background: 'linear-gradient(135deg,#5C1466 0%, #B6178C 55%, #E454B0 100%)', boxShadow: '0 6px 18px rgba(182,23,140,0.28)' }}>
             Get In Touch
           </Link>

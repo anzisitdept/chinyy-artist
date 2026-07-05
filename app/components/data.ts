@@ -14,16 +14,16 @@ export type Artwork = {
 };
 
 const mapToArtwork = (paths: string[], category: Artwork['category']): Artwork[] => {
-    return paths.map((path, idx) => ({
-        id: `${category.replace(/\s+/g, '-').toLowerCase()}-${idx}`,
-        title: `${category} Collection`,
-        category: category,
-        image: path,
-        medium: '',
-        dimensions: '',
-        year: '',
-        story: '',
-    }));
+  return paths.map((path, idx) => ({
+    id: `${category.replace(/\s+/g, '-').toLowerCase()}-${idx}`,
+    title: `${category} Collection`,
+    category: category,
+    image: path,
+    medium: '',
+    dimensions: '',
+    year: '',
+    story: '',
+  }));
 };
 
 export const artworks: Artwork[] = [
@@ -32,11 +32,11 @@ export const artworks: Artwork[] = [
   ...mapToArtwork(decorationImages, 'Decorations'),
 ];
 
-export const categories = ['All', 'Wall Arts', 'Paintings', 'Decorations', 'Exhibitions', 'Community', 'Commissioned'] as const;
+export const categories = ['All', 'Wall Arts', 'Paintings', 'Decorations', 'Exhibitions'] as const;
 
 export const HERO_WORKS = [
-    artworks[0], 
-    artworks[Math.floor(artworks.length / 4)], 
-    artworks[Math.floor(artworks.length / 2)], 
-    artworks[Math.floor(artworks.length / 1.5)]
+  artworks[0],
+  artworks[Math.floor(artworks.length / 4)],
+  artworks[Math.floor(artworks.length / 2)],
+  artworks[Math.floor(artworks.length / 1.5)]
 ].filter(Boolean);

@@ -6,7 +6,7 @@ export default function About() {
             <div className="max-w-[1220px] mx-auto px-6 sm:px-10 lg:px-12 grid lg:grid-cols-[430px_1fr] gap-12 items-start">
                 <div className="relative">
                     <div className="rounded-[30px] overflow-hidden shadow-[0_26px_60px_rgba(80,12,78,0.18)] border-[7px] border-white">
-                        <img src="../about.jpeg" alt="Chinenye Okonta – @rt Chinny World" className="w-full h-[552px] object-cover protected-img" draggable={false} />
+                        <img src="/about.jpg.jpeg" alt="Chinenye Okonta – @rt Chinny World" className="w-full h-[552px] object-cover object-center protected-img" draggable={false} />
                     </div>
                     <div className="absolute -left-5 bottom-7 bg-white/95 backdrop-blur rounded-2xl shadow-xl px-4 py-3 border border-[#f3d7ea] max-w-[248px]">
                         <div className="text-[12px] text-[#ad5992] font-[600]">Prince Edward Island • Epekwitk</div>

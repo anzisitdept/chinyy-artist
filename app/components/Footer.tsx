@@ -13,7 +13,7 @@ export default function Footer() {
     {
       icon: MessageCircle,
       label: 'WhatsApp',
-      href: 'https://wa.me/1234567890', // Replace with actual WhatsApp number
+      href: 'https://wa.me/+19023143123', // Replace with actual WhatsApp number
       color: '#25D366'
     },
     {

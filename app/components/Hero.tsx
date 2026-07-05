@@ -71,11 +71,11 @@ export default function Hero() {
     return (
         <section id="home" className="hero-gradient text-white relative overflow-hidden">
             <div className="absolute inset-0 opacity-[0.14] watermark-tile pointer-events-none" />
-            <div className="max-w-[1220px] mx-auto px-6 sm:px-10 lg:px-12 py-[72px] lg:py-[104px] grid lg:grid-cols-[1.12fr_.98fr] gap-12 items-center relative">
+            <div className="max-w-[1220px] mx-auto px-5 sm:px-10 lg:px-12 pt-[40px] pb-[64px] lg:py-[104px] grid lg:grid-cols-[1.12fr_.98fr] gap-12 items-center relative">
                 {/* left */}
-                <div>
+                <div className="min-w-0">
 
-                    <h1 className="display text-[36px] sm:text-[58px] lg:text-[68px] leading-[1.05] sm:leading-[0.93] font-[660] mt-6 tracking-[-0.018em] overflow-hidden">
+                    <h1 className="display text-[32px] sm:text-[48px] lg:text-[68px] leading-[1.08] sm:leading-[0.93] font-[660] mt-4 tracking-[-0.018em] break-words">
                         Art that stays with you<br className="hidden sm:block" />
                         <span className="italic font-[550] text-[#ffd2f2]">long after you leave</span><br className="hidden sm:block" />
                         <span className="sm:hidden"> </span>the room.
@@ -101,7 +101,7 @@ export default function Hero() {
                 </div>
 
                 {/* right: hero carousel */}
-                <div className="relative">
+                <div className="relative min-w-0 w-full max-w-full">
                     <div className="absolute -top-6 -left-9 w-24 h-24 rounded-full blur-[32px] opacity-70" style={{ background: 'radial-gradient(circle,#E454B0, transparent 70%)' }} />
                     <div className="relative rounded-[34px] overflow-hidden shadow-[0_34px_80px_rgba(46,4,53,0.44)] border border-white/18 bg-[#2c0a33]/10 backdrop-blur-sm">
                         <div className="aspect-[4/5] relative overflow-hidden">

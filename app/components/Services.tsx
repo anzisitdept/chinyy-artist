@@ -47,7 +47,7 @@ export default function Services() {
             <div className="max-w-[1220px] mx-auto px-6 sm:px-10 lg:px-12">
                 <div className="text-center max-w-[720px] mx-auto mb-12">
                     <div className="text-[11.5px] uppercase tracking-[0.18em] text-[#B6178C] font-[700]">Services</div>
-                    <h2 className="display text-[41px] text-[#2a182a] mt-2">Murals • Original art • Art education & therapy</h2>
+                    <h2 className="display text-[28px] sm:text-[36px] lg:text-[41px] text-[#2a182a] mt-2 leading-[1.15]">Murals • Original art • Art education & therapy</h2>
                 </div>
                 <div className="grid md:grid-cols-3 gap-7">
                     {services.map(s => (
