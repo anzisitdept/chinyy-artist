@@ -46,16 +46,15 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/88 border-b border-[#f0e5f0]">
-      <div className="max-w-[1220px] mx-auto px-6 sm:px-10 lg:px-12 h-[74px] flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 rounded-[16px] overflow-hidden shadow-sm">
-            <img src="/logo-splash.png" alt="@rt Chinny World" className="w-full h-full object-cover protected-img" draggable={false} />
-            <div className="absolute inset-0 mix-blend-overlay opacity-[0.16] bg-[radial-gradient(circle_at_30%_30%,#E454B0,#5C1466)]"></div>
-          </div>
-          <div className="leading-tight">
-            <div className="display text-[18px] font-[650] tracking-tight text-[#37113a]">@rt Chinny World</div>
-            <div className="text-[11px] text-[#936392] -mt-[1px] tracking-wide">Chinenye Okonta • PEI</div>
-          </div>
+      <div className="relative max-w-[1220px] mx-auto px-4 sm:px-8 lg:px-12 h-auto sm:h-[78px] md:h-[86px] flex items-center justify-end lg:justify-between py-3 sm:py-0">
+        <Link href="/" className="absolute left-1/2 -translate-x-1/2 lg:static lg:transform-none lg:ml-6 flex items-center gap-3 group flex-shrink-0">
+          {/* Logo only - no shape, transparent background */}
+          <img
+            src="/chinny-logo.png"
+            alt="@rt Chinny World"
+            className="w-28 h-18 sm:w-28 sm:h-20 lg:w-36 lg:h-20 object-contain protected-img"
+            draggable={false}
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center relative text-[13.7px] font-[500] text-[#443247] gap-2">
